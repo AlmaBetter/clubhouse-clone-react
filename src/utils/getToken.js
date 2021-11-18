@@ -1,6 +1,7 @@
+import uuidv4 from 'uuidv4';
+
 const endPoint = process.env.REACT_APP_TOKEN_ENDPOINT || 'https://webw2wje9f.execute-api.ap-south-1.amazonaws.com/';
 const room_id = process.env.REACT_APP_ROOM_ID || '61962136af3188df33e6935e';
-import uuidv4 from 'uuidv4'
 
 export default async function getToken(role) {
   const response = await fetch(`${endPoint}api/token`, {
